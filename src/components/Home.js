@@ -28,18 +28,22 @@ function Home() {
   });
   return (
     <>
-      <main className="flex justify-around items-center gap-5 my-10 mx-44">
-        <div className="w-[45%]">
+      <main className="flex flex-col md:flex-row justify-around items-center gap-5 my-10 mx-44">
+        <div className="w-80% md:w-[45%]">
           <div>
-            <img className="w-80 h-80 rounded-lg" src={img} alt="product" />
+            <img
+              className=" w-120 h-200 md:w-80 md:h-80 rounded-lg"
+              src={img}
+              alt="product"
+            />
           </div>
           <div>
-            <div className="flex flex-row gap-5 my-5 focus:bg-pale-orange">
+            <div className="hidden md:flex md:flex-row gap-5 my-5 focus:bg-pale-orange ">
               {imgList}
             </div>
           </div>
         </div>
-        <div className="w-[45%]">
+        <div className="w-80% md:w-[45%]">
           <h4 className="text-orange-400 uppercase text-xs font-bold mb-2">
             Sneaker Company
           </h4>
@@ -61,7 +65,7 @@ function Home() {
           <div className="mt-5 flex gap-2">
             <div className="flex items-center">
               <button className="text-orange-400 text-sm px-2 bg-light-grayish-blue w-7 h-7 rounded ">
-                <img src={minus} />
+                <img src={minus} alt="minusicon" />
               </button>
               <input
                 className="bg-light-grayish-blue  w-7 h-7 rounded text-xs font-bold"
@@ -69,7 +73,7 @@ function Home() {
                 value="0"
               />
               <button className="text-orange-400 px-2 bg-light-grayish-blue  w-7 h-7 rounded">
-                <img src={plus} />
+                <img src={plus} alt="plusicon" />
               </button>
             </div>
             <div className="bg-orange-500 w-auto text-white flex rounded-md px-10 py-1 gap-2 items-center">

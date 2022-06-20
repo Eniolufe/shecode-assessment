@@ -15,11 +15,35 @@ function Header() {
   return (
     <>
       <nav className="flex justify-around items-center p-5 border-b-2 border-light-grayish-blue">
+        <button
+          onClick={handleToggler}
+          className="md:hidden cursor-pointer border-none z-20  "
+        >
+          {toggler ? (
+            <img
+              src={close}
+              alt="closeicon"
+              onClick={closeMenu}
+              className="stroke-pink-500 h-4 w-4"
+            />
+          ) : (
+            <img
+              src={menu}
+              alt="menu"
+              onClick={closeMenu}
+              className="stroke-pink-500 h-4 w-4"
+            />
+          )}
+        </button>
         <div className="flex gap-12 justify-between ">
           <Link to="/" onClick={closeMenu}>
             <img src={logo} alt="logo" />
           </Link>
-          <ul className="flex md:flex-row justify-between gap-6 items-center">
+          <ul
+            className={`flex flex-col justify-center md:px-0 items-center md:flex-row top-0 md:h-auto h-screen fixed md:static gap-6 md:gap-1 inset-0 ${
+              !toggler ? "right-[-200%]" : "right-0"
+            } ${toggler ? "bg-orange-400" : "null"}`}
+          >
             <li className="text-sm text-dark-grayish-blue hover:border-b-2 hover:border-orange-400">
               <Link to="/collections" onClick={closeMenu}>
                 Collections
@@ -55,26 +79,6 @@ function Header() {
           w-7 h-7 border-2 hover:border-orange-400 cursor-pointer rounded-full"
           />
         </div>
-        <button
-          onClick={handleToggler}
-          className="md:hidden cursor-pointer border-none z-20"
-        >
-          {toggler ? (
-            <img
-              src={close}
-              alt="closeicon"
-              onClick={closeMenu}
-              className="stroke-pink-500 h-8 w-8"
-            />
-          ) : (
-            <img
-              src={menu}
-              alt="menu"
-              onClick={closeMenu}
-              className="stroke-pink-500 h-8 w-8"
-            />
-          )}
-        </button>
       </nav>
     </>
   );
