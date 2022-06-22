@@ -71,7 +71,13 @@ function Header() {
         </div>
 
         <div className="flex justify-between gap-7 items-center">
-          <img src={cart} alt="cart" className="w-3 h-3 cursor-pointer" />
+          <div>
+            <span>0</span>
+            <Link to="/cart">
+              <img src={cart} alt="cart" className="w-3 h-3 cursor-pointer" />
+            </Link>
+          </div>
+
           <img
             src={avatar}
             alt="avatar"

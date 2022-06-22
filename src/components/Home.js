@@ -62,9 +62,9 @@ function Home() {
             </h3>
           </div>
           <h5 className="text-grayish-blue text-xs line-through">$250.00</h5>
-          <div className="mt-5 flex gap-2">
+          <div className="mt-5 md:flex-row flex-col flex gap-2">
             <div className="flex items-center">
-              <button className="text-orange-400 text-sm px-2 bg-light-grayish-blue w-7 h-7 rounded ">
+              <button className="text-orange-400 text-sm md:px-2 bg-light-grayish-blue w-7 h-7 rounded ">
                 <img src={minus} alt="minusicon" />
               </button>
               <input
@@ -72,7 +72,7 @@ function Home() {
                 type="text"
                 value="0"
               />
-              <button className="text-orange-400 px-2 bg-light-grayish-blue  w-7 h-7 rounded">
+              <button className="text-orange-400 md:px-2 bg-light-grayish-blue w-7 h-7 rounded">
                 <img src={plus} alt="plusicon" />
               </button>
             </div>
